@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
 import SaiStore from "../../Assets/Projects/SaiStore.png";
-import weatherApp from "../../Assets/Projects/WeatherApp.png"
+// import weatherApp from "../../Assets/Projects/WeatherApp.png"
 import HotelBooking from "../../Assets/Projects/HotelBooking.png"
 import TicTacToe from "../../Assets/Projects/TicTacToe.png"
 import currency from "../../Assets/Projects/currency.png"
@@ -85,7 +85,7 @@ function Projects() {
               ghLink="https://github.com/Roushankumarsingh/AnalogClock"
             />
           </Col>
-          <Col md={4} className="project-card">
+          {/* <Col md={4} className="project-card">
             <ProjectCard
               imgPath={weatherApp}
               // isBlog={false}
@@ -93,7 +93,7 @@ function Projects() {
               description="The app provides real-time weather updates for your current location or any place you search, powered by API calls. Users can easily access detailed weather reports with a smooth and responsive interface."
               ghLink="https://github.com/Roushankumarsingh/Weather-App"
             />
-          </Col>
+          </Col> */}
 
           
         </Row>
