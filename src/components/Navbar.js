@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logog from "../Assets/logog.png";
-import logok from "../Assets/logok.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
+
+import { CgGitFork, CgFileDocument } from "react-icons/cg";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -15,8 +13,7 @@ import {
   AiOutlineUser,
   AiOutlineMail,
 } from "react-icons/ai";
-
-import { CgFileDocument } from "react-icons/cg";
+import { BsPatchCheckFill } from "react-icons/bs"; // Certificate icon
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -41,8 +38,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logog} className="img-fluid logo" alt="GK" />
-          <img src={logok} className="img-fluid logo" alt="GK" />
+        <p className="boldonse-regular">RKS</p>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -88,6 +84,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/certificates"
+                onClick={() => updateExpanded(false)}
+              >
+                <BsPatchCheckFill style={{ marginBottom: "2px" }} /> Certificates
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
@@ -95,15 +101,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item> */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -116,7 +113,7 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/gauravjha0711"
+                href="https://github.com/Roushankumarsingh"
                 target="_blank"
                 className="fork-btn-inner"
               >
